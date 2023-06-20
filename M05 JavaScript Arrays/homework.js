@@ -1,57 +1,142 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
+var primerElem=[1, 2, 6, 4, 23];
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
-}
+   console.log(array[0]);
+   return(array[0]);
 
+};
+//devolverPrimerElemento(primerElem);
+
+
+var ultimoElem=[1, 2, 6, 4, 23];
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
-}
+   console.log(array.length);
+   var long=(array.length);
+   console.log(array[long - 1]);
+   return (array[long - 1]);
+};
+devolverUltimoElemento(ultimoElem);
 
+
+
+var largo=[1, 2, 6, 4, 23];
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
-}
+   console.log(array.length);
+   return (array.length)
+};
+obtenerLargoDelArray(largo);
 
+
+
+var sumando1=[2, 4, 6, 8, 10];
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
-}
+   var long= array.length;
+   for( let i=0; i<long; i++){
+      array[i]=array[i]+1;
+      console.log(array[i]);
+      
+   };
+   return array;
+   
+};
+incrementarPorUno(sumando1);
+console.log(sumando1)
 
+
+
+
+var itemMas=[2, 4 ,6 ,8];
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-}
 
+   array.push(elemento);
+   console.log(array);
+   return array;
+};
+agregarItemAlFinalDelArray(itemMas,10)
+
+
+
+var itemCom= [2, 3, 4, 5, 6];
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-}
+   array.unshift(elemento);
+   console.log (array);
+   return array;
+};
+agregarItemAlComienzoDelArray(itemCom, 1);
 
+var palabras=['hola', 'como' , 'estas', '?'];
 function dePalabrasAFrase(palabras) {
    // El argumento "palabras" es un arreglo de strings.
    // Retornar un string donde todas las palabras estén concatenadas
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
-}
+   var concatenadas=palabras.join(' ');//el espacio ' ' une los elementos con un espacio
+   console.log(concatenadas);
+   return concatenadas;
+};dePalabrasAFrase(palabras);
 
+
+var preguntoSiExiste=[10, 20, 34, 66, 100];
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
-}
 
+   var verifica=array.includes(elemento);
+   if (verifica===true){
+      console.log(verifica);
+      return true;
+   }else{
+      console.log(verifica);
+      return false;
+   };
+
+}; arrayContiene(preguntoSiExiste, 67);
+
+
+var suma=0;
+var Nums=[2,6,8,10];
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-}
+   var long=arrayOfNums.length;
+   console.log(long);
+   for (let i=0; i<long; i++){// long lo habia puesto entre parentesis y no hacia falta
+    console.log(arrayOfNums[i]);// para acceder a un elementoo del array tengo que ponerlo entre corchetes
+        suma += arrayOfNums[i]; // la variable suma tenia que declararla antes del loop
+   };
+   console.log(suma);
+   return suma;
+
+}; agregarNumeros(Nums);
+
+
+//hasta aca ok 19/6 23:42
+
+
+
+
+
+
+
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
