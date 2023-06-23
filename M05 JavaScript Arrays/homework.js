@@ -33,7 +33,7 @@ function obtenerLargoDelArray(array) {
 };
 obtenerLargoDelArray(largo);
 
-
+//==================================================
 
 var sumando1=[2, 4, 6, 8, 10];
 function incrementarPorUno(array) {
@@ -52,7 +52,7 @@ function incrementarPorUno(array) {
 incrementarPorUno(sumando1);
 console.log(sumando1)
 
-
+//==================================================
 
 
 var itemMas=[2, 4 ,6 ,8];
@@ -67,7 +67,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
 };
 agregarItemAlFinalDelArray(itemMas,10)
 
-
+//======================================================
 
 var itemCom= [2, 3, 4, 5, 6];
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -79,6 +79,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
    return array;
 };
 agregarItemAlComienzoDelArray(itemCom, 1);
+
+//==========================================================
 
 var palabras=['hola', 'como' , 'estas', '?'];
 function dePalabrasAFrase(palabras) {
@@ -92,6 +94,7 @@ function dePalabrasAFrase(palabras) {
    return concatenadas;
 };dePalabrasAFrase(palabras);
 
+//=============================================================
 
 var preguntoSiExiste=[10, 20, 34, 66, 100];
 function arrayContiene(array, elemento) {
@@ -110,13 +113,15 @@ function arrayContiene(array, elemento) {
 
 }; arrayContiene(preguntoSiExiste, 67);
 
+//================================================================
 
-var suma=0;
+
 var nums=[2,6,8,10];
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   var suma=0;
    var long=arrayOfNums.length;
    //console.log(long);
    for (let i=0; i<long; i++){// long lo habia puesto entre parentesis y no hacia falta
@@ -131,12 +136,12 @@ function agregarNumeros(arrayOfNums) {
 //===================================================================================
 //hasta aca ok 19/6 23:42
 var notas=[8, 7, 9, 10, 8];
-var sum=0;
-var cuantasNotas=0;
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var sum=0;
+   var cuantasNotas=0;
     cuantasNotas=resultadosTest.length;
     console.log("cantidad de notas " + cuantasNotas);
     for (let i=0; i<cuantasNotas; i++){
@@ -150,16 +155,23 @@ function promedioResultadosTest(resultadosTest) {
 promedioResultadosTest(notas);
 
 
+//================================================================
 
 
-
-// este ejercicio esta bien=================================================
 var grande=[10,9,25,6];
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-}
+   biggestNum=0;
+   biggestNum=Math.max(...arrayOfNums);
+   console.log(biggestNum);
+   return biggestNum;
+
+};
+numeroMasGrande(grande);
+
+//==============================================================
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
