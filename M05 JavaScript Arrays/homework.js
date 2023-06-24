@@ -178,9 +178,29 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+var totalMul=1; //va 1 porque sino todo numeo mult por 0 es =0
+
+   if (arguments.length===0){
+      console.log('sin argumentos ' + arguments.length);
+      return 0;
+   };
+
+   if (arguments.length===1){
+      console.log('solo un argumento ' + arguments.length);
+      return arguments[0];
+   };
+   
+for(var i=0; i<arguments.length; i++){
+ totalMul = (totalMul * arguments[i]);
+} 
+console.log(totalMul);
+console.log(arguments[5])
+return totalMul;
 }
+multiplicarArgumentos(3,5,4,10,6,9);
 
 
+//===============================================================
 
 //=========================================================
 function cuentoElementos(array) {
