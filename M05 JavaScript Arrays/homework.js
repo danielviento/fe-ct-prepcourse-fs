@@ -180,6 +180,8 @@ function multiplicarArgumentos() {
    // Tu código:
 var totalMul=1; //va 1 porque sino todo numeo mult por 0 es =0
 
+/*'arguments' crea una especie de array con los parametros
+ solo se puede usar el metodo length, se pueden ver el valor ej: elements[x]*/
    if (arguments.length===0){
       console.log('sin argumentos ' + arguments.length);
       return 0;
@@ -202,24 +204,92 @@ multiplicarArgumentos(3,5,4,10,6,9);
 
 //===============================================================
 
-//=========================================================
-function cuentoElementos(array) {
+
+function cuentoElementos(array){
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
-}
+   
+   var qty=0;
+   /*for(var i=0; i<array.length ;i++){           esta es la version con 'for'
+      if (array[i] > 18){
+         qty =qty + 1;
+        // console.log(qty);
+        
+      }
+   }*/
+   array.forEach(element=>{
+      if (element>18){
+        qty=qty+1;// qty++ es lo mismo
+      }
+   });
+
+   console.log(('el total de numeros mayores de 18 es ') , qty);
+   return qty;
+   
+};
+var array=[12,34,56,18,90];
+ cuentoElementos(array);
+   
+
+//==================================
+
 
 function diaDeLaSemana(numeroDeDia) {
    // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
-}
+   
+
+   if (numeroDeDia===1 || numeroDeDia===7){
+      console.log(' es fin de semana');
+      return ('Es fin de semana');
+   }else{
+      console.log('Es dia laboral');
+      return ('Es dia laboral')
+   }
+};
+diaDeLaSemana(7);
+
+
+
+//==================================================================================
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-}
+   //var num=9123;
+   var numberToString = num.toString();//convierte el num en un string
+   console.log(numberToString);
+   var numberToStringSplit= numberToString.split('');// convierte el string en un array con los elementos del string
+   console.log(numberToStringSplit);
+   if(numberToStringSplit[0]==='9'){
+      console.log('true');
+      return true;
+   }else{console.log('false');
+   return false;
+   };
+}; //empiezaConNueve(9123);
+//empiezaConNueve(6214);
+
+//hasta aca 30 de jun 2023
+//==============================================================================
+
+function todosIguales(array) {
+   // Si todos los elementos del arreglo son iguales, retornar true.
+   // Caso contrario retornar false.
+   // Tu código:
+
+for(let index=1; index<array.length; index++){
+   if (array[index] !== array[0]){
+   console.log('false');
+   return false;
+   };
+};
+   console.log('true');
+   return true;
+};
 
 
 function mesesDelAño(array) {
