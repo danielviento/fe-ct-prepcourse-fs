@@ -221,11 +221,6 @@ function empiezaConNueve(num) {
    // Tu código:
 }
 
-function todosIguales(array) {
-   // Si todos los elementos del arreglo son iguales, retornar true.
-   // Caso contrario retornar false.
-   // Tu código:
-}
 
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
