@@ -55,7 +55,7 @@ console.log(sumando1)
 //==================================================
 
 
-var itemMas=[2, 4 ,6 ,8];
+// antes itemMas estaba declarado en esta linea
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
@@ -65,6 +65,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
    console.log(array);
    return array;
 };
+var itemMas=[2, 4 ,6 ,8];
 agregarItemAlFinalDelArray(itemMas,10)
 
 //======================================================
@@ -289,7 +290,9 @@ for(let index=1; index<array.length; index++){
 };
    console.log('true');
    return true;
-};
+}; var array=[1,1,2,1];
+//console.log(todosIguales(array));
+//====================================================================================
 
 
 function mesesDelAño(array) {
@@ -297,19 +300,81 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-}
+   //if (array=[])console.log('no... meses pedidos'); return ('No se encontraron los meses pedidos');
+   var mesesPedidos=[];
+   for(let i=0;i<array.length;i++){
+      let goForCase=array[i];
+      
+
+      switch (goForCase){
+         case 'Enero': mesesPedidos.push('Enero');
+         break;
+         case 'Marzo': mesesPedidos.push('Marzo');
+         break;
+         case 'Noviembre': mesesPedidos.push('Noviembre');
+         break;
+      }
+   }
+console.log(mesesPedidos);
+var askMonth=false;
+if (askMonth=mesesPedidos.includes('Enero') && mesesPedidos.includes('Marzo') && mesesPedidos.includes('Noviembre')){
+   console.log(askMonth);
+return mesesPedidos;
+};
+console.log(askMonth);
+return('No se encontraron los meses pedidos');
+};
+
+var array=['Enero','abril','Noviembre'];
+console.log(mesesDelAño(array));
+
+//===================================================================================
+
+
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-}
+
+ var creaArray=[];
+ for(let i=0; i<=10; i++){
+   creaArray.push(i);
+ };
+ //console.log(creaArray);
+sixArray=creaArray.map((num)=>{
+   // no hay que declarar sixArray  la genera el metodo.map
+   return num*6;
+});
+
+return sixArray;
+};
+console.log(tablaDelSeis());
+
+//======================================================================================
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-}
+var arrayBigger=[];
+
+ array.forEach(element=>{
+   if(element>100){
+     arrayBigger.push(element); 
+   }
+});
+   return arrayBigger;
+};
+array=[100,77,160,133,129,188];
+console.log(mayorACien(array));
+
+
+
+
+
+
+
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
@@ -322,7 +387,29 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-}
+
+
+var numEnDos=num;
+var arrayEnDos=[];
+for(let i=1;i<=10;i++){
+   numEnDos=numEnDos+2;
+   arrayEnDos.push(numEnDos);
+   if (numEnDos===i){console.log('Se interrumpió la ejecución');
+   return ('Se interrumpió la ejecución');
+   break;
+    //se interrumpe cuando llamo a la funcion con valores desde -1 al -10
+
+   };
+};
+return arrayEnDos;
+
+};
+var num=-1;
+console.log(breakStatement(num));
+
+
+
+//=======================================================================================
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -331,7 +418,22 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-}
+ var  sumNoFive=num;
+ var  arrayNoIFive=[];
+
+for(let i=1;i<=10;i++){
+   if(i===5){continue;
+   };
+   console.log(i);
+   sumNoFive+=2;
+   arrayNoIFive.push(sumNoFive);
+};
+return arrayNoIFive;
+};
+var num=6;
+console.log(continueStatement(num));
+
+//==========================================================================================
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
